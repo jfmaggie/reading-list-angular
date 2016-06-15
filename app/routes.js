@@ -1,8 +1,6 @@
 'use strict';
 
-var readingListApp = angular.module('readingList');
-
-readingListApp.config(function($stateProvider, $urlRouterProvider) {
+module.exports = function($stateProvider, $urlRouterProvider) {
   $urlRouterProvider.otherwise('/');
 
   $stateProvider
@@ -16,4 +14,4 @@ readingListApp.config(function($stateProvider, $urlRouterProvider) {
       templateUrl: 'views/lists.html',
       controller: 'listsController'
     });
-});
+};

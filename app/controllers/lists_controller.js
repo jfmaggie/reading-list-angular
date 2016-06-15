@@ -1,8 +1,6 @@
 'use strict';
 
-var app = angular.module('readingList');
-
-app.controller('listsController',['$scope',
+module.exports = ['$scope',
   function ($scope) {
     $scope.lists = [
       {name: 'list 1'},
@@ -11,5 +9,9 @@ app.controller('listsController',['$scope',
       {name: 'list 4'},
       {name: 'list 5'}
     ];
+
+    $scope.throwError = function() {
+      throw new Error();
+    };
   }
-]);
+];
