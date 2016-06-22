@@ -11,13 +11,5 @@ module.exports = {
   output: {
     path: APP,
     filename: 'bundle.js'
-  },
-  module: {
-    preLoaders: [
-      {
-        test: /\.js$/,
-        loader: 'source-map-loader'
-      }
-    ]
   }
 };
