@@ -1,5 +1,9 @@
 <h1>We're in lists.</h1>
 <div ng-repeat="list in lists">
   {{ list.name }}
+  <button ng-click="deleteList(list, $index)">Delete List</button>
 </div>
-<button ng-click="throwError()">Throw</button>
+<form ng-submit="createList()">
+  <input type="text" placeholder="Type your list name here." ng-model="newListForm.name">
+  <button type="submit">Create List</button>
+</form>
