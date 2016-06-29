@@ -1,6 +1,6 @@
 <h1>We're in lists.</h1>
 <div ng-repeat="list in lists">
-  {{ list.name }}
+  <a ui-sref="lists-show({ id: list.id })">{{ list.name }}</a>
   <button ng-click="deleteList(list, $index)">Delete List</button>
 </div>
 <form ng-submit="createList()">

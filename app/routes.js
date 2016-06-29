@@ -9,9 +9,14 @@ module.exports = function($stateProvider, $urlRouterProvider) {
       url: '/',
       templateUrl: 'views/home.html'
     })
-    .state('lists', {
+    .state('lists-index', {
       url: '/lists',
       templateUrl: 'views/lists.html',
       controller: 'listsController'
+    })
+    .state('lists-show', {
+      url: '/lists/:id',
+      templateUrl: 'views/list.html',
+      controller: 'listController'
     });
 };

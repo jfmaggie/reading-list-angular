@@ -1,0 +1,14 @@
+<div>
+  <div ng-if="!isEditing">
+    <span>{{ list.name }}</span>
+    <button ng-click="editList()">Edit List</button>
+  </div>
+  <div ng-if="isEditing">
+    <form ng-submit="updateList()">
+      <input type="text" ng-model="list.name">
+      <span ng-repeat="error in errors.name">{{ error }}</span>
+      <button type="submit">Update</button>
+    </form>
+  </div>
+  <button ng-click="deleteList()">Delete List</button>
+</div>

@@ -16,12 +16,29 @@ module.exports = function($http) {
     });
   };
 
+  self.getList = function(id) {
+    return $http({
+      method: 'GET',
+      url: baseUrl + '/lists/' + id + '.json',
+      headers: defaultHeaders
+    });
+  };
+
   // data: { name: "xxxx" }
   self.createList = function(payload) {
     return $http({
       method: 'POST',
       url: baseUrl + '/lists.json',
       data: { list: payload },
+      headers: defaultHeaders
+    });
+  };
+
+  self.updateList = function(payload) {
+    return $http({
+      method: 'PUT',
+      url: baseUrl + '/lists/' + payload.id + '.json',
+      data: { list: { name: payload.name }},
       headers: defaultHeaders
     });
   };

@@ -2,9 +2,8 @@
 
 module.exports = [
   '$scope',
-  '$http',
   'ReadingListApiService',
-  function ($scope, $http, ReadingListApiService) {
+  function ($scope, ReadingListApiService) {
     ReadingListApiService.fetchLists()
       .then(function(response) {
         $scope.lists = response.data;
