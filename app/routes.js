@@ -18,5 +18,10 @@ module.exports = function($stateProvider, $urlRouterProvider) {
       url: '/lists/:id',
       templateUrl: 'views/list.html',
       controller: 'listController'
+    })
+    .state('items-index', {
+      url: '/lists/:id/items',
+      templateUrl: 'views/list.html',
+      controller: 'listController'
     });
 };

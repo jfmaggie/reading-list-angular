@@ -11,6 +11,10 @@ module.exports = [
     ReadingListApiService.getList($stateParams.id)
       .then(function(response) {
         $scope.list = response.data;
+        ReadingListApiService.fetchItems($scope.list.id)
+          .then(function(response) {
+            $scope.items = response.data;
+          });
       });
 
     $scope.editList = function() {

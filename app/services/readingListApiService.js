@@ -50,4 +50,12 @@ module.exports = function($http) {
       headers: defaultHeaders
     });
   };
+
+  self.fetchItems = function(id) {
+    return $http({
+      method: 'GET',
+      url: baseUrl + '/lists/' + id + '/items.json',
+      headers: defaultHeaders
+    });
+  };
 };
