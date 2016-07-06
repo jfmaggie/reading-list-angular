@@ -1,0 +1,15 @@
+<h4>Item</h4>
+<div>
+  <div ng-if="!isEditing">
+    <span>{{ item.name }}</span>
+    <button ng-click="editItem()">Edit Item</button>
+  </div>
+  <div ng-if="isEditing">
+    <form ng-submit="updateItem()">
+      <input type="text" ng-model="item.name">
+      <span ng-repeat="error in errors.name">{{ error }}</span>
+      <button type="submit">Update</button>
+    </form>
+  </div>
+  <button ng-click="deleteItem(item, $index)">Delete Item</button>
+</div>

@@ -23,5 +23,10 @@ module.exports = function($stateProvider, $urlRouterProvider) {
       url: '/lists/:id/items',
       templateUrl: 'views/list.html',
       controller: 'listController'
+    })
+    .state('items-show', {
+      url: '/lists/:list_id/items/:id',
+      templateUrl: 'views/item.html',
+      controller: 'itemController'
     });
 };

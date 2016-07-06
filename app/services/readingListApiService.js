@@ -58,4 +58,38 @@ module.exports = function($http) {
       headers: defaultHeaders
     });
   };
+
+  self.getItem = function(list_id, id) {
+    return $http({
+      method: 'GET',
+      url: baseUrl + '/lists/' + list_id + '/items/' + id + '.json',
+      headers: defaultHeaders
+    });
+  };
+
+  self.createItem = function(list_id, payload) {
+    return $http({
+      method: 'POST',
+      url: baseUrl + '/lists/' + list_id + '/items.json',
+      data: { item: payload },
+      headers: defaultHeaders
+    });
+  };
+
+  self.updateItem = function(list_id, payload) {
+    return $http({
+      method: 'PUT',
+      url: baseUrl + '/lists/' + list_id + '/items/' + payload.id + '.json',
+      data: { item: { name: payload.name }},
+      headers: defaultHeaders
+    });
+  };
+
+  self.deleteItem = function(list_id, id) {
+    return $http({
+      method: 'DELETE',
+      url: baseUrl + '/lists/' + list_id + '/items/' + id + '.json',
+      headers: defaultHeaders
+    });
+  };
 };

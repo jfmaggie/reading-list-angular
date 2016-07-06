@@ -16,6 +16,12 @@
 <div>
   <h4>Items</h4>
   <div ng-repeat="item in items">
-    {{ item.name }}
+    <a ui-sref="items-show({ list_id: list.id, id: item.id })">{{ item.name }}</a>
   </div>
 </div>
+
+<form ng-submit="createItem()">
+  <input type="text" placeholder="Type your item name here." ng-model="newItemForm.name">
+  <span ng-repeat="error in newItemForm.errors.name">{{ error }}</span>
+  <button type="submit">Create Item</button>
+</form>

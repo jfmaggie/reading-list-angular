@@ -40,5 +40,19 @@ module.exports = [
           $state.go('lists-index');
         });
     };
+
+    $scope.newItemForm = { name: '' };
+    $scope.createItem = function() {
+      ReadingListApiService.createItem($scope.list.id, $scope.newItemForm)
+        .then(
+          function(successResponse) {
+            $scope.newItemForm.errors = {};
+            $scope.items.push(successResponse.data);
+            $scope.newItemForm.name = '';
+          },
+          function(errorResponse) {
+            $scope.newItemForm.errors = errorResponse.data;
+          });
+    };
   }
 ];
