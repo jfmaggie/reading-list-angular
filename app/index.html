@@ -3,18 +3,24 @@
   <head>
     <meta charset="utf-8">
     <title>Reading List</title>
-    <link rel="stylesheet" href="bower_components/uikit/css/uikit.min.css">
+    <link rel="stylesheet" href="lib/css/uikit.min.css">
     <link rel="stylesheet" href="css/reading-list.css">
   </head>
   <body>
-    <nav>
-      <ul>
-        <li><a ui-sref="home">Home</a></li>
-        <li><a ui-sref="lists-index">Lists</a></li>
+    <nav class="uk-navbar reading-list-header">
+      <ul class="uk-navbar-nav">
+        <li><a ui-sref="home" class="reading-list-header_brand">Reading List</a></li>
+        <li><a ui-sref="lists-index" class="reading-list-header_content">Lists</a></li>
+
       </ul>
+      <div class="uk-navbar-flip">
+        <ul class="uk-navbar-nav">
+          <li><a href="#">Login</a></li>
+        </ul>
+      </div>
     </nav>
 
-    <div class="container">
+    <div class="uk-width-medium-1-2 uk-container-center reading-list-content">
       <div ui-view></div>
     </div>
 
