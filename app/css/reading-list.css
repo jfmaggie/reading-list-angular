@@ -21,6 +21,10 @@ body {
     color: white;
     font-size: 0.8em;
     margin: 0.5em 0.5em 0.2em 0; }
+  .reading-list-header .reading-list-user {
+    height: 100%;
+    font-size: 1em;
+    margin: 0.28em; }
 
 .reading-list-content {
   border: 2px solid #ffb1a3;

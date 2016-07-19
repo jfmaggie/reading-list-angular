@@ -6,6 +6,7 @@ body {
   font-size: 2em;
 }
 
+// modify default uikit navbar hover effect
 .uk-navbar {
   background-color: $nav-background-color;
   .uk-navbar-nav>li {
@@ -29,6 +30,12 @@ body {
     color: white;
     font-size: 0.8em;
     margin: 0.5em 0.5em 0.2em 0;
+  }
+
+  .reading-list-user {
+    height: 100%;
+    font-size: 1em;
+    margin: 0.28em;
   }
 }
 
