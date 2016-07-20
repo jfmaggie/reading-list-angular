@@ -1,16 +1,35 @@
-$nav-background-color: #ff6347;
-$nav-hover-color: #ffb1a3;
+$nav-background-color: #86aecc;
+$nav-hover-color: rgba(255,177,163, 1);
+$font-color: #656565;
+@import url(https://fonts.googleapis.com/css?family=Josefin+Sans:400,600);
+@import url(https://fonts.googleapis.com/css?family=Nunito);
+
+@mixin custom-font($default: ('Nunito', sans-serif)) {
+  font-family: $default;
+}
 
 body {
   width: 100%;
   font-size: 2em;
+  color: $font-color;
+  @include custom-font;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  @include custom-font;
 }
 
 // modify default uikit navbar hover effect
 .uk-navbar {
   background-color: $nav-background-color;
+
   .uk-navbar-nav>li {
-    &:hover {   background-color: $nav-hover-color;}
+    &:hover {
+      background-color: $nav-hover-color;
+      .reading-list-content {
+        border: 0px solid $nav-hover-color;
+      }
+    }
     >a:hover {  background-color: $nav-hover-color;}
   }
 }
@@ -24,23 +43,32 @@ body {
     font-size: 1em;
     font-weight: bold;
     margin: 0.28em;
+    @include custom-font;
   }
 
   .reading-list-header_content {
     color: white;
     font-size: 0.8em;
     margin: 0.5em 0.5em 0.2em 0;
+    @include custom-font;
   }
 
   .reading-list-user {
     height: 100%;
     font-size: 1em;
     margin: 0.28em;
+    @include custom-font;
   }
 }
 
 .reading-list-content {
-  border: 2px solid #ffb1a3;
-  margin-top: 0.5em;
+  // border: 0px solid $nav-hover-color;
+  margin-top: 1em;
   padding: 0.5em 1em;
+  // border-radius:          10px 10px 10px 10px;
+  // -moz-border-radius:     10px 10px 10px 10px;
+  // -webkit-border-radius:  10px 10px 10px 10px;
+  -webkit-box-shadow:     0px 0px 38px 0px rgba(0,0,0,0.75);
+  -moz-box-shadow:        0px 0px 38px 0px rgba(0,0,0,0.75);
+  box-shadow:             0px 0px 38px 0px rgba(0,0,0,0.75);
 }

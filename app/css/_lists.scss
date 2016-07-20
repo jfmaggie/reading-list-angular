@@ -1,0 +1,12 @@
+.reading-list-content_list {
+  width: 100%;
+
+  &:hover {
+    background-color: $nav-hover-color;
+  }
+
+  a {
+    color: $font-color;
+    text-decoration: none;
+  }
+}
