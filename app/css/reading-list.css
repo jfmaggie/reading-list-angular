@@ -11,11 +11,12 @@ h1, h2, h3, h4, h5, h6 {
 
 .uk-navbar {
   background-color: #86aecc; }
-  .uk-navbar .uk-navbar-nav > li:hover {
-    background-color: #ffb1a3; }
-    .uk-navbar .uk-navbar-nav > li:hover .reading-list-content {
-      border: 0px solid #ffb1a3; }
-  .uk-navbar .uk-navbar-nav > li > a:hover {
+  .uk-navbar .uk-navbar-nav > li > a:focus {
+    background-color: #86aecc;
+    color: font-color; }
+  .uk-navbar .uk-navbar-nav > li:hover,
+  .uk-navbar .uk-navbar-nav > li:hover > a,
+  .uk-navbar .uk-navbar-nav > li:hover > a:hover {
     background-color: #ffb1a3; }
 
 .reading-list-header {
@@ -40,15 +41,19 @@ h1, h2, h3, h4, h5, h6 {
 
 .reading-list-content {
   margin-top: 1em;
-  padding: 0.5em 1em;
+  padding: 1em 1em;
   -webkit-box-shadow: 0px 0px 38px 0px rgba(0, 0, 0, 0.75);
   -moz-box-shadow: 0px 0px 38px 0px rgba(0, 0, 0, 0.75);
   box-shadow: 0px 0px 38px 0px rgba(0, 0, 0, 0.75); }
 
+.reading-list-content_heading form div input {
+  padding: 0.5em; }
+
 .reading-list-content_list {
   width: 100%; }
   .reading-list-content_list:hover {
-    background-color: #ffb1a3; }
+    background-color: #ffb1a3;
+    font-size: 2em; }
   .reading-list-content_list a {
     color: #656565;
     text-decoration: none; }

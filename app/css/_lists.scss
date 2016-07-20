@@ -1,8 +1,15 @@
+.reading-list-content_heading {
+  form div input {
+    padding: 0.5em;
+  }
+}
+
 .reading-list-content_list {
   width: 100%;
 
   &:hover {
     background-color: $nav-hover-color;
+    font-size: 2em;
   }
 
   a {

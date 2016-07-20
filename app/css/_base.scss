@@ -23,14 +23,15 @@ h1, h2, h3, h4, h5, h6 {
 .uk-navbar {
   background-color: $nav-background-color;
 
-  .uk-navbar-nav>li {
-    &:hover {
-      background-color: $nav-hover-color;
-      .reading-list-content {
-        border: 0px solid $nav-hover-color;
-      }
-    }
-    >a:hover {  background-color: $nav-hover-color;}
+  .uk-navbar-nav>li>a:focus {
+    background-color: $nav-background-color;
+    color: font-color;
+  }
+
+  .uk-navbar-nav>li:hover,
+  .uk-navbar-nav>li:hover>a,
+  .uk-navbar-nav>li:hover>a:hover {
+    background-color: $nav-hover-color;
   }
 }
 
@@ -64,7 +65,7 @@ h1, h2, h3, h4, h5, h6 {
 .reading-list-content {
   // border: 0px solid $nav-hover-color;
   margin-top: 1em;
-  padding: 0.5em 1em;
+  padding: 1em 1em;
   // border-radius:          10px 10px 10px 10px;
   // -moz-border-radius:     10px 10px 10px 10px;
   // -webkit-border-radius:  10px 10px 10px 10px;

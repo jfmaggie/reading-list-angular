@@ -1,4 +1,13 @@
-<h3 class="uk-animation-fade">We're in lists.</h3>
+<div class="reading-list-content_heading">
+  <h2 class="uk-animation-fade">Now it's your turn to create a reading list. <i class="uk-icon-hand-spock-o"></i></h2>
+  <form ng-submit="createList()">
+    <div class="uk-form-icon">
+      <i class="uk-icon-list-alt"></i>
+      <input type="text" placeholder="Your Reading List" ng-model="newListForm.name">
+    </div>
+    <button type="submit"><i class="uk-icon-list-alt"></i> Create List</button>
+  </form>
+</div>
 <hr>
 <ul ng-repeat="list in lists" class="uk-list uk-list-space">
   <li class="reading-list-content_list uk-text-justify uk-text-middle">
@@ -8,7 +17,3 @@
     <button ng-click="deleteList(list, $index)"><i class="uk-icon-remove"></i> Delete List</button>
   </li>
 </ul>
-<form ng-submit="createList()">
-  <input type="text" placeholder="Type your list name here." ng-model="newListForm.name">
-  <button type="submit">Create List</button>
-</form>
