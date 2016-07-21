@@ -26,6 +26,7 @@
     "webpack-dev-server": "^1.14.1"
   },
   "scripts": {
+    "prestart": "npm install && bower install",
     "start": "webpack-dev-server --content-base app"
   },
   "dependencies": {

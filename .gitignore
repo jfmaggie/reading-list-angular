@@ -3,3 +3,4 @@ bower_components/
 app/bundle.js*
 app/bundle.css*
 fontawesome-webfont*
+npm-debug*
