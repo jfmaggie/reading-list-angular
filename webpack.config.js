@@ -27,7 +27,7 @@ module.exports = {
     }),
     // we'll also tell the ExtractTextPlugin where the final CSS file should be generated
     // (relative to config.output.path) so in our case `app/style.css`
-    new ExtractTextPlugin('styles.css')
+    new ExtractTextPlugin('bundle.css')
   ],
 
   resolve: {

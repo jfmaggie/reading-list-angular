@@ -1,4 +1,5 @@
 node_modules/
 bower_components/
 app/bundle.js*
-app/styles.css*
+app/bundle.css*
+fontawesome-webfont*
