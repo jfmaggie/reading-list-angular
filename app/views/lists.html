@@ -1,9 +1,9 @@
 <div class="reading-list-content_heading">
   <h2 class="uk-animation-fade">Now it's your turn to create a reading list. <i class="uk-icon-hand-spock-o"></i></h2>
-  <form ng-submit="createList()">
+  <form ng-submit="createList()" class="reading-list-content_heading_form">
     <div class="uk-form-icon">
       <i class="uk-icon-list-alt"></i>
-      <input type="text" placeholder="Your Reading List" ng-model="newListForm.name">
+      <input type="text" placeholder="Your Reading List" ng-model="newListForm.name" class="reset-input-padding">
     </div>
     <button type="submit"><i class="uk-icon-list-alt"></i> Create List</button>
   </form>

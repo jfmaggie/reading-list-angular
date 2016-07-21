@@ -1,19 +1,30 @@
 .reading-list-content_heading {
-  form div input {
+  font-size: 0.9em;
+  @include custom-font;
+
+  .reset-input-padding {
     padding: 0.5em;
+  }
+  .reading-list-content_heading_form {
+    margin: 0.5em 0;
+    position: relative;
   }
 }
 
 .reading-list-content_list {
   width: 100%;
+  font-size: 0.7em;
 
   &:hover {
     background-color: $nav-hover-color;
-    font-size: 2em;
   }
 
   a {
     color: $font-color;
     text-decoration: none;
   }
+}
+
+.reading-list-error {
+  font-size: 0.5em;
 }
