@@ -1,27 +1,39 @@
-<div>
+<div class="reading-list-content_heading">
   <div ng-if="!isEditing">
-    <span>{{ list.name }}</span>
-    <button ng-click="editList()">Edit List</button>
+    <span class="uk-h2">{{ list.name }}</span>
+    <button ng-click="editList()"><i class="uk-icon-edit"></i> Edit List</button>
+    <button ng-click="deleteList()"><i class="uk-icon-remove"></i> Delete List</button>
   </div>
   <div ng-if="isEditing">
     <form ng-submit="updateList()">
-      <input type="text" ng-model="list.name">
-      <span ng-repeat="error in errors.name">{{ error }}</span>
-      <button type="submit">Update</button>
+      <div class="uk-form-icon">
+        <i class="uk-icon-book"></i>
+        <input type="text" ng-model="list.name" class="reset-input-padding">
+      </div>
+      <button type="submit"><i class="uk-icon-save"></i> Update</button>
+      <span ng-repeat="error in errors.name" class="uk-text-danger reading-list-error">
+        {{ list.name + " " + error }}
+      </span>
     </form>
   </div>
-  <button ng-click="deleteList()">Delete List</button>
-</div>
 
-<div>
-  <h4>Items</h4>
-  <div ng-repeat="item in items">
-    <a ui-sref="items-show({ list_id: list.id, id: item.id })">{{ item.name }}</a>
-  </div>
-</div>
+  <form ng-submit="createItem()" class="reading-list-content_heading_form">
+    <div class="uk-form-icon">
+      <i class="uk-icon-book"></i>
+      <input type="text" placeholder="Your Book" ng-model="newItemForm.name" class="reset-input-padding">
+    </div>
+    <button type="submit"><i class="uk-icon-plus"></i> Add A Book</button>
+    <span ng-repeat="error in newItemForm.errors.name" class="uk-text-danger reading-list-error">{{ newItemForm.name + " " + error }}</span>
+  </form>
 
-<form ng-submit="createItem()">
-  <input type="text" placeholder="Type your item name here." ng-model="newItemForm.name">
-  <span ng-repeat="error in newItemForm.errors.name">{{ error }}</span>
-  <button type="submit">Create Item</button>
-</form>
+</div>
+<hr>
+
+<ul ng-repeat="item in items" class="uk-list uk-list-space">
+  <li class="reading-list-content_list uk-text-justify uk-text-middle">
+    <a ui-sref="items-show({ list_id: list.id, id: item.id })">
+      <i class="uk-icon-book"></i>
+      <span class="uk-text-large">  {{ item.name }}</span>
+    </a>
+  </li>
+</ul>
