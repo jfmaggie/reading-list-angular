@@ -25,13 +25,14 @@ h1, h2, h3, h4, h5, h6 {
 
   .uk-navbar-nav>li>a:focus {
     background-color: $nav-background-color;
-    color: font-color;
+    color: $nav-hover-color;
   }
 
   .uk-navbar-nav>li:hover,
   .uk-navbar-nav>li:hover>a,
   .uk-navbar-nav>li:hover>a:hover {
     background-color: $nav-hover-color;
+    color: $font-color;
   }
 }
 
@@ -50,14 +51,14 @@ h1, h2, h3, h4, h5, h6 {
   .reading-list-header_content {
     color: white;
     font-size: 0.8em;
-    margin: 0.5em 0.5em 0.2em 0;
+    margin: 0.5em 0.5em 0.2em 0.5em;
     @include custom-font;
   }
 
   .reading-list-user {
     height: 100%;
-    font-size: 1em;
-    margin: 0.28em;
+    font-size: 0.9em;
+    margin: 0.31em;
     @include custom-font;
   }
 }

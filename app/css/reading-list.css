@@ -13,11 +13,12 @@ h1, h2, h3, h4, h5, h6 {
   background-color: #86aecc; }
   .uk-navbar .uk-navbar-nav > li > a:focus {
     background-color: #86aecc;
-    color: font-color; }
+    color: #ffb1a3; }
   .uk-navbar .uk-navbar-nav > li:hover,
   .uk-navbar .uk-navbar-nav > li:hover > a,
   .uk-navbar .uk-navbar-nav > li:hover > a:hover {
-    background-color: #ffb1a3; }
+    background-color: #ffb1a3;
+    color: #656565; }
 
 .reading-list-header {
   width: 100%;
@@ -31,12 +32,12 @@ h1, h2, h3, h4, h5, h6 {
   .reading-list-header .reading-list-header_content {
     color: white;
     font-size: 0.8em;
-    margin: 0.5em 0.5em 0.2em 0;
+    margin: 0.5em 0.5em 0.2em 0.5em;
     font-family: "Nunito", sans-serif; }
   .reading-list-header .reading-list-user {
     height: 100%;
-    font-size: 1em;
-    margin: 0.28em;
+    font-size: 0.9em;
+    margin: 0.31em;
     font-family: "Nunito", sans-serif; }
 
 .reading-list-content {
