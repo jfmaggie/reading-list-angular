@@ -1,0 +1,16 @@
+{
+  "name": "reading-list-angular",
+  "description": "",
+  "main": "./app/app.js",
+  "license": "MIT",
+  "homepage": "https://github.com/jfmaggie/reading-list-angular",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components"
+  ],
+  "dependencies": {
+    "uikit": "^2.26.4"
+  }
+}

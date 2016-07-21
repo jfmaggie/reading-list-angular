@@ -1,6 +1,4 @@
-@import url(https://fonts.googleapis.com/css?family=Josefin+Sans:400,600);
-@import url(https://fonts.googleapis.com/css?family=Nunito);
-body {
+@import url(https://fonts.googleapis.com/css?family=Josefin+Sans:400,600);@import url(https://fonts.googleapis.com/css?family=Nunito);body {
   width: 100%;
   font-size: 2em;
   color: #656565;
@@ -58,4 +56,4 @@ h1, h2, h3, h4, h5, h6 {
     color: #656565;
     text-decoration: none; }
 
-/*# sourceMappingURL=reading-list.css.map */
+/*# sourceMappingURL=styles.css.map*/
