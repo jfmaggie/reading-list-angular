@@ -41,7 +41,7 @@ module.exports = {
     loaders: [
       {
         test: /\.scss$/,
-        loader:  ExtractTextPlugin.extract('style-loader', 'css-loader!sass-loader')
+        loader:  ExtractTextPlugin.extract('style-loader', 'css-loader!resolve-url-loader!sass-loader?sourceMap')
       },
       {
         test: /\.woff2(\?\S*)?$/,
