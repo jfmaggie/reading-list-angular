@@ -8,8 +8,7 @@ module.exports = {
   devtool: 'source-map',
 
   entry: {
-    app: APP + 'core/bootstrap.js',
-    style: APP + 'css/reading-list.scss',
+    app: [APP + 'core/bootstrap.js', APP + 'css/reading-list.scss']
   },
 
   output: {
@@ -18,17 +17,16 @@ module.exports = {
   },
 
   // what plugins we'll be using
-  // we'll also tell the ExtractTextPlugin where the final CSS file should be generated
-  // (relative to config.output.path)
   plugins: [
     // makes a module (JQuery here) available as variable in every module
     // needed for UIkit
     new webpack.ProvidePlugin({ // http://webpack.github.io/docs/shimming-modules.html
-        $: "jquery",
-        jQuery: "jquery",
-        jquery: "jquery",
-        "window.jQuery": "jquery"
+      $: "jquery",
+      jQuery: "jquery",
+      "window.jQuery": "jquery"
     }),
+    // we'll also tell the ExtractTextPlugin where the final CSS file should be generated
+    // (relative to config.output.path) so in our case `app/style.css`
     new ExtractTextPlugin('styles.css')
   ],
 
