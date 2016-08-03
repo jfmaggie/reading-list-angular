@@ -92,4 +92,18 @@ module.exports = function($http) {
       headers: defaultHeaders
     });
   };
+
+  self.userSignup = function(email, password) {
+    return $http({
+      method: 'POST',
+      url: baseUrl + '/users.json',
+      data: {
+        user: {
+          email: email,
+          password: password
+        }
+      },
+      headers: defaultHeaders
+    });
+  };
 };

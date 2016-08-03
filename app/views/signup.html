@@ -1,0 +1,7 @@
+<form class="" ng-submit="signup()">
+  Email: <input type="text" name="email" ng-model="email.value">
+  <span ng-repeat="error in email.errors">{{error}}</span>
+  Password: <input type="password" name="password" ng-model="password.value">
+  <span ng-repeat="error in password.errors">{{error}}</span>
+  <button type="submit" name="button">Signup</button>
+</form>

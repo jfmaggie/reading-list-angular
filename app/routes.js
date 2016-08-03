@@ -28,5 +28,18 @@ module.exports = function($stateProvider, $urlRouterProvider) {
       url: '/lists/:list_id/items/:id',
       templateUrl: 'views/item.html',
       controller: 'itemController'
+    })
+    .state('login', {
+      url: '/login',
+      templateUrl: 'views/login.html',
+      controller: 'loginController',
+      params: {
+        message: null
+      }
+    })
+    .state('signup', {
+      url: '/signup',
+      templateUrl: 'views/signup.html',
+      controller: 'signupController'
     });
 };
