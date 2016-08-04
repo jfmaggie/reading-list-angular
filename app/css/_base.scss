@@ -36,6 +36,25 @@ h1, h2, h3, h4, h5, h6 {
   }
 }
 
+.uk-button,
+.uk-button-large,
+.uk-button-small {
+  &:focus {
+    color: $nav-hover-color;
+  }
+  &:hover {
+    background-color: $nav-hover-color;
+    color: $font-color;
+  }
+}
+
+a, .uk-link {
+  color: $font-color;
+  &:hover {
+    color: $nav-hover-color;
+    text-decoration: none;
+  }
+}
 .reading-list-header {
   width: 100%;
   height: 2em;
