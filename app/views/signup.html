@@ -1,7 +1,35 @@
-<form class="" ng-submit="signup()">
-  Email: <input type="text" name="email" ng-model="email.value">
-  <span ng-repeat="error in email.errors">{{error}}</span>
-  Password: <input type="password" name="password" ng-model="password.value">
-  <span ng-repeat="error in password.errors">{{error}}</span>
-  <button type="submit" name="button">Signup</button>
-</form>
+<div class="login-box">
+  <div class="uk-panel-wrapper">
+    <div class="uk-panel-box">
+      <form class="uk-form" ng-submit="signup()">
+        <div class="uk-grid">
+          <div class="uk-width-1-3 uk-text-right">
+            <label class="uk-form-label" for="email">Email</label>
+          </div>
+          <div class="uk-width-2-3">
+            <input type="text" name="email" ng-model="email.value">
+            <ul class="uk-list" ng-if="email.errors">
+              <li ng-repeat="error in email.errors" class="uk-text-danger reading-list-error">{{error}}</li>
+            </ul>
+          </div>
+        </div>
+        <div class="uk-grid">
+          <div class="uk-width-1-3 uk-text-right">
+            <label class="uk-form-label" for="password">Password</label>
+          </div>
+          <div class="uk-width-2-3">
+            <input type="password" name="password" ng-model="password.value">
+            <ul class="uk-list"  ng-if="password.errors">
+              <li ng-repeat="error in password.errors" class="uk-text-danger reading-list-error">{{error}}</li>
+            </ul>
+          </div>
+        </div>
+        <div class="uk-grid">
+          <div class="uk-width-1-1 uk-text-center">
+            <button type="submit" class="uk-button uk-button-large uk-text-large" type="button">SIGN UP</button>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
