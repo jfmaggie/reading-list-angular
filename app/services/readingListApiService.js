@@ -106,4 +106,18 @@ module.exports = function($http) {
       headers: defaultHeaders
     });
   };
+
+  self.userLogin = function(email, password) {
+    return $http({
+      method: 'POST',
+      url: baseUrl + '/login.json',
+      data: {
+        user: {
+          email: email,
+          password: password
+        }
+      },
+      headers: defaultHeaders
+    });
+  }
 };

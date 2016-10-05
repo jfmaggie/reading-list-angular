@@ -2,10 +2,14 @@
 
 var controllers = require('./controllers/index');
 var services = require('./services/index');
+var factories = require('./factories/index');
 
 // Declare the app level module and dependencies
-module.exports = angular.module('readingList', ['ui.router', controllers.name, services.name])
+module.exports = angular.module('readingList', ['ui.router', controllers.name, services.name, factories.name])
   .config(require('./routes'))
+  .config(function($httpProvider) {
+    $httpProvider.interceptors.push('authInterceptor');
+  })
   .run(function($state, $timeout, $rootScope) {
     $rootScope.$on('$stateChangeStart', function(event, toState, toParams, fromState, fromParams) {
       console.log('$stateChangeStart to ' + toState.to + '-fired when the transition begins. toState, toParams : \n', toState, toParams);
